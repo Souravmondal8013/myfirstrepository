@@ -1,43 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>making a form using bootstrap</title>
 </head>
+
 <body>
-    <table border="1" cellpadding="7" cellspacing="3">
-        <thead>
-            <tr>
-                <th width="200">
-                        Name
-                </th>
-                    <th width="400">
-                        email
-                    </th>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td rowspan="2">amit</td>
-              <td>amit@gmail.com</td>
-           </tr>
-           <tr> 
-               <td>amit2@gmail.com</td>
-           </tr>
-           <tr>
-            <td>roni</td>
-            <td>roni@gmail.com</td>
-         </tr>
-         <tr>
-            <td>sam</td>
-            <td>sam@gmail.com</td>
-         </tr>
-        </tbody>
-        <tfoot>
-            <td colspan="2" bgcolor="blue">this is the footer</td>
-        </tfoot>
-    </table>
+  <section>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+      <a class="navbar-brand" href=""> Fun Form</a>
+      <div class="collapse navbar-collapse">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link" href=""> Input information</a>
+          <a class="nav-link" href=""> Chose the type</a>
+          <a class="nav-link" href=""> Previous experiences</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <section  style="margin-top: 60px;">
+    <form action="" class=" container" >
+      <label for="inputname">Full Name</label>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control border-info" placeholder="First name" id="firstname" required>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control border-info" placeholder="Last name" id="last name" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputemail">Enter your Email</label>
+        <input type="email" class="form-control border-info" placeholder="Email@mail.com" id="youremail" required>
+        <small>You'r privacy is safe with us</small>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6">
+          <label for="inputemail">Enter your Password</label>
+          <input type="password" class="form-control border-info" placeholder="password" id="yourpassword" required>
+          <small>You'r privacy is safe with us</small>
+        </div>
+        <div class="form-group col-6">
+          <label for="inputemail">Confirm your Password</label>
+          <input type="password" class="form-control border-info" placeholder="password" id="yourpassword" required>
+          <small>You'r privacy is safe with us</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputphonenumber">Enter your Phone No.</label>
+        <input type="tel" class="form-control border-info" placeholder="Contact Number" id="yournumber" required>
+        <small>You'r privacy is safe with us</small>
+      </div>
+      <div class="form-group">
+        <label for="inputaddress">Enter your Address</label>
+        <input type="text" class="form-control border-info" placeholder="Your current address" id="youaddress" required>
+        <small>You'r privacy is safe with us</small>
+      </div>
+      <div class="form-row">
+        <legend class="col-2 col-sm-2">Your gender</legend>
+        <div class="form-check form-check-inline col-sm-2">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"required>
+          <label class="form-check-label" for="gridRadios1">
+            Male
+          </label>
+        </div>
+        <div class="form-check form-check-inline col-sm-2">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
+          <label class="form-check-label" for="gridRadios2">
+            Female
+          </label>
+        </div>
+        <div class="form-check form-check-inline col-sm-2">
+          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
+          <label class="form-check-label" for="gridRadios2">
+            Others
+          </label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-6 bg-secondary">
+          <label for="inputemail"> Select City name</label>
+          <select name="city" id="yourcity" required>
+            <option value="chinsurah">chinsurah</option>
+            <option value="hooghly">hooghly</option>
+            <option value="mogra">mogra</option>
+            <option value="uttorpara">uttorpara</option>
+            <option value="rishra">rishra</option>
+          </select>
+        </div>
+        <div class="form-group col-6 bg-secondary">
+          <label for="inputemail"> Select state name</label>
+          <select name="city" id="yourcity" required>
+            <option value="chinsurah">howrah</option>
+            <option value="hooghly">hooghly</option>
+            <option value="mogra">kolkata</option>
+            <option value="uttorpara">.....</option>
+            <option value="rishra">.........</option>
+          </select>
+        </div>
+      </div>
+      <section>
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <img class="card-img-top " style="width: 200px;" src="images/clean-code.png" alt="">
+              <div class="card-body">
+                <h4 class="card-header">COMPUTER</h4>
+                <p class="card-text">advancing with the special tecnology staff</p>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img class="card-img-top " style="width: 200px;" src="images/cloud.png" alt="">
+              <div class="card-body">
+                <h4 class="card-header">ELECTRONICS</h4>
+                <p class="card-text">electronic divices are the vast part of communication in advance socity</p>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+      </section>
+      <button type="submit" class="btn btn-primary mb-2 btn-block my-3">Submit</button>
+    </form>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
